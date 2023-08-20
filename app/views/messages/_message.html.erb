@@ -1,0 +1,4 @@
+<article id="<%= dom_id(message) %>">
+  <%= current_user == message.author ? "You" : message.author.name %>:
+  <%= message.body %>
+</article>

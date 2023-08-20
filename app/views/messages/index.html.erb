@@ -1,0 +1,12 @@
+<h1>Messages</h1>
+
+<%= turbo_stream_from :messages %>
+<div id="messages">
+  <%= render @messages %>
+</div>
+
+<%= form_with model: Message.new do |form| %>
+  <%= form.label :body %>
+  <%= form.text_field :body %>
+  <%= form.submit %>
+<% end %>
